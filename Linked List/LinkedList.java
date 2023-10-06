@@ -99,7 +99,110 @@ public class LinkedList
         // i=indx-1 | temp -> prev
         newNode.next = temp.next;
         temp.next = newNode;
+    }
 
+    public int removeFirst()
+    {
+        if(size == 0)
+        {
+            System.out.println("Linked list is empty");
+            return Integer.MIN_VALUE;
+        }
+
+        else if(size == 1)
+        {
+            int val = head.data;
+            head = tail = null;
+            size = 0;
+            return val;
+        }
+
+        int val = head.data;
+        head = head.next;
+        size--;
+        return val;
+    }
+
+    public int removeLast()
+    {
+        if(size==0)
+        {
+            System.out.println("Linked List is empty");
+            return Integer.MIN_VALUE;
+        }
+
+        else if(size == 1)
+        {
+            int val = head.data;
+            head = tail = null;
+            size = 0;
+            return val;
+        }
+
+        //prev : i = size-2
+        Node temp = head;
+        int i=0;
+
+        for(i=0; i<=size-2; i++)
+        {
+            temp = temp.next;
+        }
+
+        int val = temp.next.data;       //tail.data
+        temp.next = null;
+        tail = temp;
+        size--;
+
+        return val;
+    }
+
+    public int itrSearch(int key)       //O(n)
+    {
+        Node temp = head;
+        int i=0; 
+
+        while(temp.next != null)
+        {
+            if(temp.data == key)
+            {
+                System.out.println("Key found at index : " + i);
+                return i;
+            }
+
+            else
+            {
+                temp = temp.next;
+            }
+        }
+
+        //key not found
+        return -1;
+    }
+
+    public int helper(Node head, int key)
+    {
+        if(head == null)
+        {
+            return -1;
+        }
+
+        else if(head.data == key)
+        {
+            return 0;
+        }
+
+        int indx = helper(head.next, key);
+        if(indx == -1)
+        {
+            return -1;
+        }
+
+        return indx+1;
+    }
+
+    public int RecSearch(int key)
+    {
+        return helper(head,key);
     }
 
     public static void main(String args[])
