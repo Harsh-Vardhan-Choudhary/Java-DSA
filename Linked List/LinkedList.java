@@ -179,7 +179,7 @@ public class LinkedList
         return -1;
     }
 
-    public int helper(Node head, int key)
+    public int helper(Node head, int key)       //helper function - we can also use it directly
     {
         if(head == null)
         {
@@ -203,6 +203,126 @@ public class LinkedList
     public int RecSearch(int key)
     {
         return helper(head,key);
+    }
+
+    public void reverse()       //O(n)
+    {
+        Node prev = null;
+        Node curr = tail = head;
+        Node next;
+
+        while(curr != null)
+        {
+            next = curr.next;
+            curr.next = prev; 
+            prev = curr; 
+            curr = next;
+        }
+        head = prev;
+    }
+
+    public void deleteNthFromEnd(int n)
+    {
+        int sz = 0;
+        Node temp = head;
+        while(temp != null)
+        {
+            temp = temp.next;
+            sz++;
+        }
+
+        if(n == sz)
+        {
+            head = head.next;   //removeFirst
+            return;
+        }
+
+        int i=1;
+        int iToFind = sz-n;
+        Node prev = head;
+        if(i<iToFind)
+        {
+            prev = prev.next;
+            i++;
+        }
+
+        prev.next = prev.next.next;
+    }
+
+    //check whether the linked list is palindrome or not
+
+    //slow fast method - we will used this method to find out the centre of the linked list
+    public Node findMid(Node head)
+    {
+        Node slow = head;
+        Node fast = head;
+
+        while(fast!=null || fast.next!=null)
+        {
+            slow = slow.next;       //+1
+            fast = fast.next.next;  //+2
+        }
+
+        return slow;        //it will return the mid node of LL
+    }
+
+    public boolean checkPalindrome()
+    {
+        //LL is empty or single element is present
+        if(head == null || head.next==null)
+        {
+            return true;
+        }
+
+        //mid node
+        Node MidNode = findMid(head);
+        
+        //reversing the right side LL
+        Node prev = null;
+        Node curr = MidNode;
+        Node next;
+
+        while(curr!=null)
+        {
+            next = curr.next;
+            curr.next = prev; 
+            prev = curr; 
+            curr = next;
+        }
+
+        Node right = prev;
+        Node left = head;
+
+        //checking whether the left side is equal to right side
+        while(right!=null)
+        {
+            if(right.data != left.data)
+            {
+                return false;
+            }
+            right = right.next;
+            left = left.next;
+        }
+        return true;
+    }
+
+    //detecting loop within in linked list or not
+    public static boolean detectLoop()
+    {
+        Node slow = head;
+        Node fast = head;
+
+        while(fast != null || fast.next != null)
+        {
+            slow = slow.next;
+            fast = fast.next.next;
+
+            if(slow == fast)
+            {
+                return false;
+            }
+        }
+        return true;
     }
 
     public static void main(String args[])
