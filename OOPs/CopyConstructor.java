@@ -62,5 +62,4 @@ class student
     {
         this.roll = roll;
     }
-
 }
