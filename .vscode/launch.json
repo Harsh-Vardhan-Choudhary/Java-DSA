@@ -6,6 +6,13 @@
     "configurations": [
         {
             "type": "java",
+            "name": "HeightCountSum",
+            "request": "launch",
+            "mainClass": "HeightCountSum",
+            "projectName": "Java-DSA_cc56731c"
+        },
+        {
+            "type": "java",
             "name": "ActivitySelectionUnsorted",
             "request": "launch",
             "mainClass": "ActivitySelectionUnsorted",
