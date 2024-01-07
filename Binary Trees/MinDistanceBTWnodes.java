@@ -71,9 +71,6 @@ public class MinDistanceBTWnodes
         {
             return leftDist+1;
         }
-
-
-
     }
 
     public static int minDist(Node root, int n1, int n2)
