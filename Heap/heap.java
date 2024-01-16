@@ -24,6 +24,11 @@ public class heap
             }
         }
 
+        public int peek()
+        {
+            return arr.get(0);
+        }
+
         
 
     }
