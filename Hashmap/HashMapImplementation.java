@@ -152,5 +152,9 @@ public class HashMapImplementation<K, V> {
         for (String key : keys) {
             System.out.println(key);
         }
+
+        System.out.println(hm.get("India"));
+        System.out.println(hm.remove("India"));
+        System.out.println(hm.get("India"));
     }
 }
