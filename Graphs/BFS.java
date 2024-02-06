@@ -69,7 +69,6 @@ public class BFS
                     q.add(e.dest);
                 }
             }
-
         }
     }
 
