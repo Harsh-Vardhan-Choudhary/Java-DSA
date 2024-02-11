@@ -39,6 +39,7 @@ public class CycleDetection
         graph[4].add(new Edge(4, 3));
     }
 
+    //O(V+E)
     public static boolean detectCycle(ArrayList<Edge>[] graph)
     {
         boolean vis[] = new boolean[graph.length];
@@ -77,9 +78,12 @@ public class CycleDetection
             }
 
             //case3
-            else if(!vis[e.dest] && detectCycleUtil(graph, vis, e.dest, curr))
+            else if(!vis[e.dest])
             {
-                return true;
+                if(detectCycleUtil(graph, vis, e.dest, curr))
+                {
+                    return true;
+                }
             }
         }
         return false;
