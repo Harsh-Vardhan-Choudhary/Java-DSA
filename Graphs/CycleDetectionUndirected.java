@@ -2,7 +2,7 @@ package Graphs;
 
 import java.util.*;
 
-public class CycleDetection
+public class CycleDetectionUndirected
 {
     static class Edge
     {
