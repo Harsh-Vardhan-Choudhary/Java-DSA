@@ -6,6 +6,13 @@
     "configurations": [
         {
             "type": "java",
+            "name": "BipartiteGraph",
+            "request": "launch",
+            "mainClass": "Graphs.BipartiteGraph",
+            "projectName": "Java-DSA_cc56731c"
+        },
+        {
+            "type": "java",
             "name": "HeightCountSum",
             "request": "launch",
             "mainClass": "HeightCountSum",
