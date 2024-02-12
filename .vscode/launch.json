@@ -6,6 +6,13 @@
     "configurations": [
         {
             "type": "java",
+            "name": "CycleDetectionDirected",
+            "request": "launch",
+            "mainClass": "Graphs.CycleDetectionDirected",
+            "projectName": "Java-DSA_cc56731c"
+        },
+        {
+            "type": "java",
             "name": "BipartiteGraph",
             "request": "launch",
             "mainClass": "Graphs.BipartiteGraph",
