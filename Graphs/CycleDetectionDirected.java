@@ -16,7 +16,7 @@ public class CycleDetectionDirected
         }
     }
 
-    static void createGraph(ArrayList<Edge> graph[])    //False - no cycle
+    static void createGraph(ArrayList<Edge> graph[])
     {
         for(int i=0; i<graph.length; i++)
         {
