@@ -23,15 +23,15 @@ public class TopologicalSort
             graph[i] = new ArrayList<>();
         }
 
-        graph[0].add(new Edge(2, 3));
+        graph[2].add(new Edge(2, 3));
 
-        graph[1].add(new Edge(3, 1));
+        graph[3].add(new Edge(3, 1));
 
-        graph[2].add(new Edge(4, 0));
-        graph[3].add(new Edge(4, 1));
+        graph[4].add(new Edge(4, 0));
+        graph[4].add(new Edge(4, 1));
 
-        graph[2].add(new Edge(5, 0));
-        graph[3].add(new Edge(5, 2));
+        graph[5].add(new Edge(5, 0));
+        graph[5].add(new Edge(5, 2));
     }
 
     public static void topologicalSort(ArrayList<Edge> [] graph)
