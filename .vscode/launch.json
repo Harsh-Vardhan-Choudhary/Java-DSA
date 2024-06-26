@@ -6,6 +6,20 @@
     "configurations": [
         {
             "type": "java",
+            "name": "ProductOfSubarrayBruteForce",
+            "request": "launch",
+            "mainClass": "ProductOfSubarrayBruteForce",
+            "projectName": "Java-DSA_cc56731c"
+        },
+        {
+            "type": "java",
+            "name": "ProductOfSubarray",
+            "request": "launch",
+            "mainClass": "ProductOfSubarray",
+            "projectName": "Java-DSA_cc56731c"
+        },
+        {
+            "type": "java",
             "name": "LinearSearch",
             "request": "launch",
             "mainClass": "LinearSearch",
