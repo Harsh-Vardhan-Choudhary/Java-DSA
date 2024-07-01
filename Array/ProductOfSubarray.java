@@ -10,7 +10,7 @@ public class ProductOfSubarray{
                 int end = j;
                 product=1;
                 for(int k=start; k<=end; k++) {
-                    product = nums[k]==0 ? 0 : product * nums[k];
+                    product = product * nums[k];
                 }
                 max = Math.max(product, max);
             }
@@ -25,7 +25,7 @@ public class ProductOfSubarray{
         for(int i=0; i<nums.length; i++) {
             product = 1;
             for(int j=i; j<nums.length; j++) {
-                product = nums[j]==0 ? 0 : product * nums[j];
+                product = product * nums[j];
                 max = Math.max(product, max);
             }
         }
@@ -65,5 +65,7 @@ public class ProductOfSubarray{
     public static void main(String[] args) {
         int nums[] = {0,10,10,10,10,10,10,10,10,10,-10,10,10,10,10,10,10,10,10,10,0};
         System.out.println(maxProductOptimal(nums));
+        System.out.println(maxProductBruteForce(nums));
+        System.out.println(maxProductBetter(nums));
     }
 }
