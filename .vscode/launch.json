@@ -6,6 +6,27 @@
     "configurations": [
         {
             "type": "java",
+            "name": "SetMatrixZeroOptimal",
+            "request": "launch",
+            "mainClass": "SetMatrixZeroOptimal",
+            "projectName": "Java-DSA_cc56731c"
+        },
+        {
+            "type": "java",
+            "name": "SetMatrixZeroBetter",
+            "request": "launch",
+            "mainClass": "SetMatrixZeroBetter",
+            "projectName": "Java-DSA_cc56731c"
+        },
+        {
+            "type": "java",
+            "name": "SetMatrixZero",
+            "request": "launch",
+            "mainClass": "SetMatrixZero",
+            "projectName": "Java-DSA_cc56731c"
+        },
+        {
+            "type": "java",
             "name": "ProductOfSubarrayBruteForce",
             "request": "launch",
             "mainClass": "ProductOfSubarrayBruteForce",
