@@ -1,3 +1,5 @@
+//search in a sorted matrix - StairCase search : O(n) [optimal solution]
+
 public class StairCaseSearch
 {
     public static Boolean StairCase(int matrix[][], int key)

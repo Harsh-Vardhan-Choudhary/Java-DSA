@@ -6,6 +6,13 @@
     "configurations": [
         {
             "type": "java",
+            "name": "RowWiseSearch",
+            "request": "launch",
+            "mainClass": "RowWiseSearch",
+            "projectName": "Java-DSA_cc56731c"
+        },
+        {
+            "type": "java",
             "name": "SetMatrixZeroOptimal",
             "request": "launch",
             "mainClass": "SetMatrixZeroOptimal",
