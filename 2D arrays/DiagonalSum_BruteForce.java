@@ -1,5 +1,5 @@
 import java.util.Scanner;
-public class DiagonalSum
+public class DiagonalSum_BruteForce
 {
     public static void main(String args[])
     {
