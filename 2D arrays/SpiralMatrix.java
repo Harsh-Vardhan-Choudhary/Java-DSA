@@ -7,50 +7,48 @@ public class SpiralMatrix
                        {9,10,11,12},
                        {13,14,15,16}};
         
-        int StartRow = 0;
-        int StartColumn = 0;
-        int EndRow = mat.length-1;
-        int EndColumn = mat[0].length-1;
+        int top = 0;
+        int left = 0;
+        int bottom = mat.length-1;
+        int right = mat[0].length-1;
 
-        while(StartRow<=EndRow && StartColumn<=EndColumn)
+        while(top<=bottom && left<=right)
         {
             //top
-            for(int j=StartColumn; j<=EndColumn; j++)
+            for(int j=left; j<=right; j++)
             {
-                System.out.print(mat[StartRow][j]+" ");
+                System.out.print(mat[top][j]+" ");
             }
+            top++;
 
             //right
-            for(int j=StartRow+1; j<=EndRow; j++)
+            for(int j=top; j<=bottom; j++)
             {
-                System.out.print(mat[j][EndColumn]+" ");
+                System.out.print(mat[j][right]+" ");
             }
+            right--;
 
             //bottom
-            for(int j=EndColumn-1; j>=StartColumn; j--)
+            for(int j=right; j>=left; j--)
             {
-                if(StartRow==EndRow)
+                if(top==bottom)
                 {
                     break;
                 }
-                System.out.print(mat[EndRow][j]+" ");
+                System.out.print(mat[bottom][j]+" ");
             }
+            bottom--;
             
             //left
-            for(int j=EndRow-1; j>StartRow; j--)
+            for(int j=bottom; j>top; j--)
             {
-                if(StartColumn==EndColumn)
+                if(left==right)
                 {
                     break;
                 }
-                System.out.print(mat[j][StartColumn]+" ");
+                System.out.print(mat[j][left]+" ");
             }
-
-            StartRow++;
-            StartColumn++;
-            EndRow--;
-            EndColumn--;
-
+            left++;
         }
 
     }
