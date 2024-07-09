@@ -1,6 +1,6 @@
 //search in a sorted matrix - StairCase search : O(n) [optimal solution]
 
-public class StairCaseSearch
+public class SearchIn2DSortedMatrix_StairCaseSearch
 {
     public static Boolean StairCase(int matrix[][], int key)
     {

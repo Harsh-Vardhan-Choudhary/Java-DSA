@@ -6,10 +6,13 @@
                     //if element present in range of any row -> binary search in that row
                     // O(n) for traversal in row + O(log n) binary search
 
-//optimal solution - staircase method
+
+//alternative soln - staircase method
+
+//optimal solution - assuming 2D matrix to be a 1D matrix - just hypothetically
 
 
-public class RowWiseSearch {
+public class SearchIn2DSortedMatrix_RowWiseSearch {
 
     public static boolean BS(int arr[],int key)
     {
