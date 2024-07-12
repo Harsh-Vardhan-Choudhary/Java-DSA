@@ -6,6 +6,13 @@
     "configurations": [
         {
             "type": "java",
+            "name": "PascalTriangle",
+            "request": "launch",
+            "mainClass": "PascalTriangle",
+            "projectName": "Java-DSA_cc56731c"
+        },
+        {
+            "type": "java",
             "name": "DiagonalSum_Optimal",
             "request": "launch",
             "mainClass": "DiagonalSum_Optimal",
