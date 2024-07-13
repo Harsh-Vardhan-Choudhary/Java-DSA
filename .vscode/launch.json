@@ -6,6 +6,13 @@
     "configurations": [
         {
             "type": "java",
+            "name": "MergeIntervals",
+            "request": "launch",
+            "mainClass": "MergeIntervals",
+            "projectName": "Java-DSA_cc56731c"
+        },
+        {
+            "type": "java",
             "name": "RotateMatrix",
             "request": "launch",
             "mainClass": "RotateMatrix",
