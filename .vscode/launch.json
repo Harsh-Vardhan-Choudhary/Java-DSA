@@ -6,6 +6,20 @@
     "configurations": [
         {
             "type": "java",
+            "name": "RepeatedAndMissing",
+            "request": "launch",
+            "mainClass": "RepeatedAndMissing",
+            "projectName": "Java-DSA_cc56731c"
+        },
+        {
+            "type": "java",
+            "name": "FindDuplicateNumber",
+            "request": "launch",
+            "mainClass": "FindDuplicateNumber",
+            "projectName": "Java-DSA_cc56731c"
+        },
+        {
+            "type": "java",
             "name": "MergeSortedArrays",
             "request": "launch",
             "mainClass": "MergeSortedArrays",
