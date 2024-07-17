@@ -1,6 +1,9 @@
+import java.util.Arrays;
+
 public class MergeSortedArrays {
 
-    public static void merge(int[] nums1, int m, int[] nums2, int n) {
+    //Bruteforce : O(n+m) + O(n+m)
+    public static void mergeBruteForce(int[] nums1, int m, int[] nums2, int n) {
         int nums3[] = new int[m+n];
 
         int left = 0;       //pointer for nums1
@@ -44,6 +47,29 @@ public class MergeSortedArrays {
             }
         }
     }
+
+    //Optimal1 - Two pointer approach
+    public static void mergeOptimal1(int[] nums1, int m, int[] nums2, int n) { 
+        int left = m-1;
+        int right = 0;
+
+        while(left >= 0 && right <n) {
+            if(nums1[left] > nums2[right]) {
+                swap(nums1, left, nums2, right);
+            }
+            left--;
+            right++;
+        }
+        Arrays.sort(nums1);
+        Arrays.sort(nums2);
+    }
+
+    //swap
+    public static void swap(int[] arr1, int n1, int[] arr2, int n2) {
+        int temp = arr1[n1];
+        arr1[n1] = arr2[n2];
+        arr2[n2] = temp;
+    }
     
     public static void printArr(int arr[]) {
         for(int i=0; i<arr.length; i++) {
@@ -64,7 +90,7 @@ public class MergeSortedArrays {
         System.out.print("n2 array : ");
         printArr(n2);
 
-        merge(n1, m, n2, n);
+        mergeOptimal1(n1, m, n2, n);
 
         System.out.println("After merging");
         System.out.print("n1 array : ");
