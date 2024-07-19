@@ -3,61 +3,68 @@
 import java.util.*;
 public class MergeSort
 {
-    public static void mergeSort(int arr[], int si, int ei)
+    public static void mergeSort(int arr[], int start, int end)
     {
-        if(si >= ei)
+        if(start >= end)
         {
             return;
         }
 
-        int mid = si + (ei-si)/2;
-        mergeSort(arr, si, mid);
-        mergeSort(arr, mid+1, ei);
+        int mid = (start+end)/2;
+        mergeSort(arr, start, mid);
+        mergeSort(arr, mid+1, end);
 
-        merge(arr, si, mid, ei);
+        merge(arr, start, mid, end);
     }
 
-    public static void merge(int arr[], int si, int mid, int ei)
+    public static void merge(int arr[], int start, int mid, int end)
     {
-        int temp[] = new int[ei-si+1];
-        int i = si;     //iterator for left part
-        int j = mid+1;  //iterator for right part
-        int k = 0;      //iterator for the temporary array
+        int temp[] = new int[end-start+1];
+        int left = start;       //iterator for left part
+        int right = mid+1;      //iterator for right part
+        int k = 0;              //iterator for the temporary array
 
-        while(i <= mid && j<= ei)
+        while(left <= mid && right<= end)
         {
-            if(arr[i]<arr[j])
+            if(arr[left]<=arr[right])
             {
-                temp[k] = arr[i];
-                i++;
+                temp[k] = arr[left];
+                left++;
                 k++;
             }
             else
             {
-                temp[k] = arr[j];
-                j++;
+                temp[k] = arr[right];
+                right++;
                 k++;
             }
+        }
 
-            //baki jo left hai now unke liye
+        //baki jo left hai now unke liye
 
             //if its in left part
-            while(i <= mid)
+            while(left <= mid)
             {
-                temp[k++] = arr[i++];
+                temp[k++] = arr[left++];
             }
 
             //if its on right part
-            while(j <= ei)
+            while(right <= end)
             {
-                temp[k++] = arr[j++];
+                temp[k++] = arr[right++];
             }
 
-            //copying temp array into the permanent array
-            for(k=0, i = si; k<temp.length; k++, i++)
-            {
-                arr[i] = temp[k];
-            }
+        
+        //copying temp array into the permanent array
+        for(int i=0 ; i<temp.length; i++)
+        {
+            arr[start + i] = temp[i];
+        }
+    }
+
+    public static void printArr(int arr[]) {
+        for(int index=0; index<arr.length; index++) {
+            System.out.println(arr[index] + " ");
         }
     }
 
@@ -68,17 +75,16 @@ public class MergeSort
         System.out.print("Enter the size of the array : ");
         int n = input.nextInt();
         int array[] = new int[n];
+
         for(int i=0; i<array.length; i++)
         {
             System.out.print("Enter the value of element at index ["+i+"] : ");
             array[i] = input.nextInt();
         }
+        
         mergeSort(array, 0, array.length-1);
         
         System.out.println("Your Sorted array is : ");
-        for(int i=0; i<n; i++)
-        {
-            System.out.print(array[i] + "\t");
-        }
+        printArr(array);
     }
 }
