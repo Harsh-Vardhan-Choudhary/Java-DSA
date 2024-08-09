@@ -6,6 +6,13 @@
     "configurations": [
         {
             "type": "java",
+            "name": "MooreVotingAlgorithm",
+            "request": "launch",
+            "mainClass": "MooreVotingAlgorithm",
+            "projectName": "Java-DSA_cc56731c"
+        },
+        {
+            "type": "java",
             "name": "QuickSort",
             "request": "launch",
             "mainClass": "QuickSort",
