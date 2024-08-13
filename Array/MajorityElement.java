@@ -56,10 +56,62 @@ public class MajorityElement {
         return majority;
     }
 
+    //optimal approach
+    public static ArrayList<Integer> optimal(int nums[]) {
+        int threshold = nums.length/3;
+        ArrayList<Integer> majority = new ArrayList<>();
+
+        int el1=Integer.MIN_VALUE;
+        int el2=Integer.MIN_VALUE;
+        int cnt1=0;
+        int cnt2=0;
+
+        for(int num: nums) {
+            if(cnt1==0 && el2!=num) {
+                cnt1=1;
+                el1 = num;
+            }
+
+            else if(cnt2==0 && el1!=num) {
+                cnt2=1;
+                el2 = num;
+            }
+
+            else if(el1 == num) {
+                cnt1++;
+            }
+
+            else if(el2 == num) {
+                cnt2++;
+            }
+
+            else {
+                cnt1--;
+                cnt2--;
+            }
+        }
+
+        //verifying that the el1 && el2 are majority element
+        cnt1=0; cnt2=0;
+        for(int num:nums) {
+            if(num == el1) cnt1++;
+            if(num == el2) cnt2++;
+        }
+
+        if(cnt1>threshold) {
+            majority.add(el1);
+        }
+
+        if(cnt2>threshold) {
+            majority.add(el2);
+        }
+
+        return majority;
+    }
+
     public static void main(String[] args) {
         int arr[] = {1,1,1,3,3,2,2,2};
-        ArrayList<Integer> ans = better(arr);
-        System.out.println(ans);
+        System.out.println(optimal(arr));
     }
     
 }
