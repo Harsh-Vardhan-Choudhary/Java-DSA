@@ -6,6 +6,13 @@
     "configurations": [
         {
             "type": "java",
+            "name": "twoSum",
+            "request": "launch",
+            "mainClass": "twoSum",
+            "projectName": "Java-DSA_cc56731c"
+        },
+        {
+            "type": "java",
             "name": "MajorityElement",
             "request": "launch",
             "mainClass": "MajorityElement",
