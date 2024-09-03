@@ -8,7 +8,7 @@ public class DeleteMidNodeLL {
         ListNode(int val, ListNode next) { this.val = val; this.next = next; }
     }
 
-    public ListNode deleteMiddle(ListNode head) {email
+    public ListNode deleteMiddle(ListNode head) {
 
         if (head == null || head.next == null) {
             return null; // List is empty or has only one node
