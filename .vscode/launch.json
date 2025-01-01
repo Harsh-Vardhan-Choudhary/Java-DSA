@@ -6,6 +6,55 @@
     "configurations": [
         {
             "type": "java",
+            "name": "IntegerBreak",
+            "request": "launch",
+            "mainClass": "AccenturePractice.IntegerBreak",
+            "projectName": "Java-DSA_cc56731c"
+        },
+        {
+            "type": "java",
+            "name": "minMovesBinaryMatrix",
+            "request": "launch",
+            "mainClass": "AccenturePractice.minMovesBinaryMatrix",
+            "projectName": "Java-DSA_cc56731c"
+        },
+        {
+            "type": "java",
+            "name": "firstLetterOccurTwice",
+            "request": "launch",
+            "mainClass": "AccenturePractice.firstLetterOccurTwice",
+            "projectName": "Java-DSA_cc56731c"
+        },
+        {
+            "type": "java",
+            "name": "stringSorter",
+            "request": "launch",
+            "mainClass": "AccenturePractice.stringSorter",
+            "projectName": "Java-DSA_cc56731c"
+        },
+        {
+            "type": "java",
+            "name": "floydsTriangle",
+            "request": "launch",
+            "mainClass": "AccenturePractice.floydsTriangle",
+            "projectName": "Java-DSA_cc56731c"
+        },
+        {
+            "type": "java",
+            "name": "tribonacciSeries",
+            "request": "launch",
+            "mainClass": "AccenturePractice.tribonacciSeries",
+            "projectName": "Java-DSA_cc56731c"
+        },
+        {
+            "type": "java",
+            "name": "FibonacciSeries",
+            "request": "launch",
+            "mainClass": "AccenturePractice.FibonacciSeries",
+            "projectName": "Java-DSA_cc56731c"
+        },
+        {
+            "type": "java",
             "name": "twoSum",
             "request": "launch",
             "mainClass": "twoSum",
