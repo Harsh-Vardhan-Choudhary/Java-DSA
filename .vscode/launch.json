@@ -6,6 +6,20 @@
     "configurations": [
         {
             "type": "java",
+            "name": "arrayFunctions",
+            "request": "launch",
+            "mainClass": "Repeated.arrayFunctions",
+            "projectName": "Java-DSA_cc56731c"
+        },
+        {
+            "type": "java",
+            "name": "movingAllZeroToEnd",
+            "request": "launch",
+            "mainClass": "movingAllZeroToEnd",
+            "projectName": "Java-DSA_cc56731c"
+        },
+        {
+            "type": "java",
             "name": "IntegerBreak",
             "request": "launch",
             "mainClass": "AccenturePractice.IntegerBreak",
