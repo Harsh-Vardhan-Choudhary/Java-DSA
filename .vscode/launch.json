@@ -6,6 +6,13 @@
     "configurations": [
         {
             "type": "java",
+            "name": "rotateArrayByD",
+            "request": "launch",
+            "mainClass": "rotateArrayByD",
+            "projectName": "Java-DSA_cc56731c"
+        },
+        {
+            "type": "java",
             "name": "arrayFunctions",
             "request": "launch",
             "mainClass": "Repeated.arrayFunctions",
